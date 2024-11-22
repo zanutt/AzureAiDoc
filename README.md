@@ -21,6 +21,18 @@ Make sure you have the following dependencies installed in your environment:
 
 ### Installation Steps
 
+"Create a resource group in the Azure portal:
+
+Create and implement a Storage Account for the Blob container. In the primary service, define Azure Files, set the redundancy to LRS, and configure it according to your usage needs.
+In the Storage Account service, create a container, name it as you wish, and save the name. You will need it for configuration in the project settings.
+Create and implement a Document Intelligence resource, and configure it according to your usage needs.
+Important Configuration Steps:
+
+In the Storage Account, go to the overview section and enable Blob Anonymous Access. ***WARNING***: Enable this option only for study and testing purposes.
+
+In the Storage Account, go to the "Keys" section and copy the Connection String. You will also need it for the configuration.
+In the Document Intelligence resource, go to the "Access Keys" section and copy the Endpoint and Key. You will need them for the configuration as well."
+
 Clone this repository:
 
 ```bash
@@ -39,7 +51,7 @@ Install the project dependencies:
 pip install -r requirements.txt
 ```
 
-Configure the .env file with the required environment variables.
+Configure the .env file with the required environment variables. The variables in the .env file are the ones you saved during the initial steps.
 
 ### Running the Application
 
